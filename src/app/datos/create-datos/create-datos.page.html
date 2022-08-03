@@ -1,0 +1,51 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>create-datos</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <form [formGroup]="form" (submit)="onSubmit()">
+    <ion-item>
+      <ion-input
+        type="text"
+        placeholder="Nombre"
+        formControlName="datNombre"
+        required>
+      </ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-input
+        type="text"
+        placeholder="Apellido"
+        formControlName="datApellido"
+        required>
+      </ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-input
+        type="number"
+        placeholder="Edad"
+        formControlName="datEdad"
+        required>
+      </ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-input
+        type="text"
+        placeholder="Deporte"
+        formControlName="datDeporte"
+        required>
+      </ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-input
+        type="text"
+        placeholder="Url Imágen"
+        formControlName="datImagen"
+        required>
+      </ion-input>
+    </ion-item>
+  </form>
+
+</ion-content>
