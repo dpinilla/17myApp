@@ -41,4 +41,13 @@ export class ConexionService {
      ))
   }
 
+  updateDatos(data){
+    return this.http
+    .post(this.url+"/updateDatos", JSON.stringify(data))
+    .pipe(tap(() =>{
+       this._refresh$.next();
+    }
+    ))
+ }
+
 }

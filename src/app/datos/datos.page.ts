@@ -104,4 +104,14 @@ export class DatosPage implements OnInit {
       
   }
 
+  updateDatos(datos:Datos){
+    this.modalCrtl.create({
+      component: CreateDatosPage, componentProps: {datos}
+    })
+    .then((modal) =>{
+      modal.present();
+      return modal.onDidDismiss()
+    })
+  }
+
 }

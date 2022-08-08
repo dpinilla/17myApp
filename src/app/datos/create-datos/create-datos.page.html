@@ -1,6 +1,6 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title>create-datos</ion-title>
+    <ion-title>{{isUpdate? 'Actualizando datos' : 'Creando Datos'}}</ion-title>
   </ion-toolbar>
 </ion-header>
 
@@ -46,6 +46,14 @@
         required>
       </ion-input>
     </ion-item>
+    <ion-button
+       type="submit"
+       [disabled]="form.invalid"
+       class="ion-margin-top"
+       expand="block"
+    >
+      {{isUpdate? 'Actualizar' : 'Crear'}}
+    </ion-button>
   </form>
 
 </ion-content>
